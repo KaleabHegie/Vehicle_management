@@ -1,0 +1,34 @@
+{% load static %}
+<section class="banner">
+    <div class="slider">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+          
+          {% for i in slider  %}
+
+          <div class="swiper-slide">
+            <div class="slide-inner">
+              <div
+                class="slide-image"
+                style="
+                  background-image: url('/media/{{i.image}}');
+                "
+              ></div>
+              <div class="swiper-content">
+                <h1>{{i.discription}}</h1>
+                <a href=" {% url 'add_registry' %} " class="biz-btn">Star Booking</a>
+              </div>
+              <div class="overlay"></div>
+            </div>
+          </div>
+         
+          {% endfor %}          
+      
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>

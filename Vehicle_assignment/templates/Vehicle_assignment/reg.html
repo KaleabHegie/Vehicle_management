@@ -1,0 +1,18 @@
+
+ {% include 'Vehicle_assignment/includes/head.html' %}
+
+
+        <div class="container">
+            <div class="row">
+              <div class="col-lg-4">
+                <h1>Add Registry</h1>
+                <form id="" method="post">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <input class="btn btn-lg btn-primary" type="submit" value="Save">
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+  

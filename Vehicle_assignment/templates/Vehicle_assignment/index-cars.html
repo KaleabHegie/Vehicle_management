@@ -1,0 +1,242 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
+
+{% include 'Vehicle_assignment/message.html' %}
+
+  {% include 'Vehicle_assignment/includes/head.html' %}
+  <body>
+    
+    {% include 'Vehicle_assignment/includes/header.html' %} 
+ 
+    {% include 'Vehicle_assignment/includes/banner.html' %}
+
+    <section class="why-us pad-top-0">
+      <div class="container">
+        <div class="section-title">
+          <h2>How it <span>works</span></h2>
+          <p>
+            Lorem Ipsum is simply dummy text the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s,
+          </p>
+        </div>
+        <div class="why-us-box">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="why-us-item text-center">
+                <div class="why-us-para">1.</div>
+                <div class="why-us-content">
+                  <h3><a href="#">Fill information</a></h3>
+                  <p class="mar-0">
+                    You must select your starting and destination and reason of
+                    trip first.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="why-us-item text-center">
+                <div class="why-us-para">2.</div>
+                <div class="why-us-content">
+                  <h3><a href="#">Log in if not</a></h3>
+                  <p class="mar-0">
+                    You must be loged in to use the system after that vehicle
+                    will be assigned to you by our officers.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="why-us-item text-center">
+                <div class="why-us-para">3.</div>
+                <div class="why-us-content">
+                  <h3><a href="#">Bon voyage</a></h3>
+                  <p class="mar-0">
+                    After you recived an sms of your assigned vehicle and driver
+                    you can enjoy your trip.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+
+
+
+      </div>
+      
+      <div class="row justify-content-center mt-5">
+        <a class="biz-btn btn-lg" href="{% url 'add_registry' %}"> Book Now </a>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section  class="banner-form">
+
+<!-- create_registry.html -->
+
+
+   
+
+    </section>
+
+    <section class="cars-trending bg-grey pad-bottom-50">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our luxery cars</h2>
+          <p>
+            Lorem Ipsum is simply dummy text the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s,
+          </p>
+        </div>
+        <div class="trend-box">
+          <div class="row team-slider">
+            {% for i in cars %}
+
+            <div class="col-lg-4 col-sm-6 col-12 mar-bottom-30">
+              <div class="trend-item">
+                <div class="trend-image">
+                  <img
+                    src="/media/{{i.image}}"
+                    style="height: 300px"
+                    alt="image"
+                  />
+                  <div class="trend-tags">
+                    <a href="#"><i class="flaticon-like"></i></a>
+                  </div>
+                  <div class="trend-price">
+                    <p class="price"><span>$350.00</span>/per day</p>
+                  </div>
+                </div>
+                <div class="trend-content">
+                  <h4><a href="#">{{i.model}}</a></h4>
+                  <h4><a href="#">{{i.color}}</a></h4>
+                  <h4><a href="#">{{i.plate_number}}</a></h4>
+                  <div class="rating mar-bottom-15">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="customer-reviews bg-grey">
+      <div class="container">
+        <div class="section-title">
+          <h2>More Than 960+ People <span>Are Happy With Us.</span></h2>
+          <p>
+            Lorem Ipsum is simply dummy text the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s,
+          </p>
+        </div>
+        <div class="row about-slider">
+
+
+          {% for i in review  %}
+          <div class="col-lg-4 review-item">
+            <div class="review-image">
+              <img src="{% static 'images/testimonial1.jpg' %}" alt="image" />
+              <div class="review-quote">
+                <i class="fa fa-quote-left" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="review-content mar-top-25">
+              <p class="content">
+                This is the third time I've used Travelo Website and telling you
+                the truth their services are always reliable and it ony takes
+                few minutes to plan and finalize.
+              </p>
+              <h3 class="mar-bottom-5">Jessica Brown</h3>
+              <p class="mar-bottom-5">Director/Franchisis Com</p>
+              <ul class="list-inline mar-0">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+              </ul>
+            </div>
+          </div>
+         
+          {% endfor %}
+
+        </div>
+      </div>
+    </section>
+
+    <section class="partners bg-grey">
+      <div class="container">
+        <div class="dest-partner">
+          <div class="row partner-slider">
+            <div class="col-lg-2">
+              <img src="{% static 'images/cl-1.png' %}" alt="partners" />
+            </div>
+            <div class="col-lg-2">
+              <img src="{% static 'images/cl-2.png' %}" alt="partners" />
+            </div>
+            <div class="col-lg-2">
+              <img src="{% static 'images/cl-3.png' %}" alt="partners" />
+            </div>
+            <div class="col-lg-2">
+              <img src="{% static 'images/cl-4.png' %}" alt="partners" />
+            </div>
+            <div class="col-lg-2">
+              <img src="{% static 'images/cl-5.png' %}" alt="partners" />
+            </div>
+            <div class="col-lg-2">
+              <img src="{% static 'images/cl-2.png' %}" alt="partners" />
+            </div>
+            <div class="col-lg-2">
+              <img src="{% static 'images/cl-3.png' %}" alt="partners" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ready-block">
+      <div class="container">
+        <div class="block-inner display-flex space-between">
+          <h3 class="mar-bottom-0">
+            <a href="#" class="white">Enough reason for you?</a>
+          </h3>
+          <a href="{% url 'add_registry' %}" class="biz-btn-black">rent a car now</a>
+        </div>
+      </div>
+    </section>
+
+    {% include 'Vehicle_assignment/includes/footer.html' %}
+
+    <div id="back-to-top">
+      <a href="#"></a>
+    </div>
+
+ 
+
+   
+
+   
+    {% include 'Vehicle_assignment/includes/script.html' %}
+  </body>
+
+  <!-- Mirrored from htmldesigntemplates.com/html/nepayatri/bootstrap4/index-cars.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Jun 2023 12:02:35 GMT -->
+</html>

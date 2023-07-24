@@ -1,0 +1,5 @@
+<form id="officer-form" method="post">
+    {% csrf_token %}
+    {{ officer_form.as_p }}
+    <button type="submit" class="btn btn-primary">Approve</button>
+  </form>

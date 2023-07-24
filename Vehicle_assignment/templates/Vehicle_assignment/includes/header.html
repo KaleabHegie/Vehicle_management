@@ -1,0 +1,145 @@
+{% load static %}
+
+
+{% for i in data  %}
+
+<header class="main_header_area">
+  <div class="header-content">
+    <div class="container">
+      <div class="links links-left">
+        <ul>
+          <li>
+            <a href="#"><i class="fa fa-phone-alt"></i>{{i.phone1}}</a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa fa-envelope-open"></i>
+              <span
+                class="__cf_email__"
+                data-cfemail="bdd4d3dbd2fdf3d8cddcc4dcc9cfd493ded2d0"
+                >{{i.email1}}</span
+              ></a
+            >
+          </li>
+          <li>
+            <select>
+              <option>EUR</option>
+              <option>FRA</option>
+              <option>ESP</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+      <div class="links links-right pull-right">
+        <ul>
+          <li>
+            <ul class="social-links">
+              <li>
+                <a href="{{i.facebook}}"
+                  ><i class="fab fa-facebook" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a href="{{i.twitter}}"
+                  ><i class="fab fa-twitter" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a href="{{i.instagram}}"
+                  ><i class="fab fa-instagram" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a href="{{i.linkedin}}"
+                  ><i class="fab fa-linkedin" aria-hidden="true"></i
+                ></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="header_menu affix-top">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-flex">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+              <img src=" {% static  'images/logo-black.png' %}" alt="image" />
+            </a>
+          </div>
+
+          <div
+            class="collapse navbar-collapse"
+            id="bs-example-navbar-collapse-1"
+          >
+            <ul class="nav navbar-nav" id="responsive-menu">
+              <li>
+                <a href="{% url 'index' %}">Home </a>
+              </li>
+
+              <li >
+                <a href="{% url 'service' %}">Service</a>
+              </li>
+              <li>
+                <a href="{% url 'about' %}">About Us</a>
+              </li>
+              <li>
+                <a href="{% url 'contact' %}">Contact Us</a>
+              </li>
+              <li>
+                <a href="{% url 'terms' %}">Terms</a>
+              </li>
+              <li>
+                  <a href="{% url 'faq' %}">FAQ</a>
+              </li>
+              <li>
+                <a href="{% url 'blog' %}">Blogs</a>
+              </li>
+
+              
+              {% if user.is_authenticated %}
+
+              <li style="margin:10px">
+                <a href="{% url 'logout' %}" 
+                  ><i class="fa fa-sign-in-alt"></i> Logout</a
+                >
+              </li>
+      
+             
+              <li style="margin:10px">
+              <img class="img ima-fluid" src="/media/{{user.employee.image}}" style="width: 40px;height: 40px;border-radius: 50%;"   alt="">
+              
+              <span>   &nbsp {{user.employee.customuser.username}}</span>
+            </li>
+            {% comment %} <li>
+              <a href="{% url 'employee_review'  %}">Reviews</a>
+            </li> {% endcomment %}
+           
+            <li>
+              <a href="{% url 'change_password' %}">Change Password</a>
+            </li>
+    
+              {% else %}
+    
+              <li  >
+                <a href="{% url 'login' %}" 
+                  ><i class="fa fa-sign-in-alt"></i> Login</a
+                >
+              </li>
+              
+    
+              {% endif %}
+            </ul>
+          </div>
+
+          <div id="slicknav-mobile"></div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+{% endfor %}

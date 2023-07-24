@@ -1,0 +1,392 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
+  <!-- Mirrored from htmldesigntemplates.com/html/nepayatri/bootstrap4/blog-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Jun 2023 12:11:00 GMT -->
+
+  {% include 'Vehicle_assignment/includes/head.html' %}
+
+  <body>
+
+    
+{% include 'Vehicle_assignment/includes/header.html' %}
+
+
+    <section class="breadcrumb-outer text-center">
+      <div class="container">
+        <div class="breadcrumb-content">
+          <h2 class="white">Blog Single</h2>
+          <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Blog Single
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </section>
+
+    <section class="blogmain">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-12">
+            <div class="blog-single">
+              <div class="blog-image">
+                <img src="/media/{{blog.image}}" alt="image" />
+              </div>
+              <div class="blog-content mar-bottom-30">
+                <h3 class="blog-title">
+                  <a href="blog-single.html"
+                    >{{blog.title}}</a
+                  >
+                </h3>
+                <div class="para-content pad-bottom-20">
+                  <span class="mar-right-20"
+                    ><a href="#" class="tag"
+                      ><i class="fa fa-tag mar-right-5"></i> Popular
+                    </a></span
+                  >
+                  <span class="mar-right-20"
+                    ><a href="#"
+                      ><i class="fa fa-user mar-right-5"></i> Adam Joel</a
+                    ></span
+                  >
+                  <span
+                    ><a href="#"><i class="fa fa-comment"></i> 20</a></span
+                  >
+                </div>
+              </div>
+
+              <div class="blog-quote mar-bottom-30">
+                <p class="white">
+                  {{blog.discription}}</p>
+                <span class="white">By Michael Delwell</span>
+                <i class="fas fa-quote-left"></i>
+              </div>
+
+              
+                <div class="header-social">
+                  <ul>
+                    <li>
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="blog-author mar-bottom-30 bg-grey">
+                <div class="blog-author-item">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-3 col-12">
+                      <div class="blog-thumb text-center">
+                        <img src="images/inbox4.jpg" alt />
+                      </div>
+                    </div>
+                    <div class="col-lg-9 col-md-9 col-12">
+                      <h3 class="title">
+                        <a href="#"
+                          >About Author <span>Graphic Designer</span></a
+                        >
+                      </h3>
+                      <p class="mar-0">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vivamus sceler neque in euismod. Nam vitae urnasodales
+                        neque in faucibus.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+             
+              <div class="single-comments single-box">
+                <h3 class="mar-bottom-30">
+                  Showing 16 verified guest comments
+                </h3>
+                <div class="comment-box">
+                  <div class="comment-image">
+                    <img src="images/testimonial1.jpg" alt="image" />
+                  </div>
+                  <div class="comment-content">
+                    <h4>Helena</h4>
+                    <p class="comment-date">April 25, 2019 at 10:46 am</p>
+                    <div class="comment-rate">
+                      <div class="rating mar-right-15">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                      </div>
+                      <span class="comment-title">The worst hotel ever"</span>
+                    </div>
+                    <p class="comment">
+                      Take in the iconic skyline and visit the neighbourhood
+                      hangouts that you've only ever seen on TV. Take in the
+                      iconic skyline and visit the neighbourhood.
+                    </p>
+                    <div class="comment-like">
+                      <div class="like-title">
+                        <a href="#" class="biz-btn biz-btn1">Reply</a>
+                      </div>
+                      <div class="like-btn pull-right">
+                        <a href="#" class="like"
+                          ><i class="fa fa-thumbs-up"></i> Like</a
+                        >
+                        <a href="#" class="disike"
+                          ><i class="fa fa-thumbs-down"></i> Dislike</a
+                        >
+                        <a href="#" class="love"
+                          ><i class="flaticon-like"></i> Love</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-box">
+                  <div class="comment-image">
+                    <img src="images/testimonial1.jpg" alt="image" />
+                  </div>
+                  <div class="comment-content">
+                    <h4>Helena</h4>
+                    <p class="comment-date">April 25, 2019 at 10:46 am</p>
+                    <div class="comment-rate">
+                      <div class="rating mar-right-15">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                      </div>
+                      <span class="comment-title"
+                        >Was too noisy and not suitable for business
+                        meetings"</span
+                      >
+                    </div>
+                    <p class="comment">
+                      Take in the iconic skyline and visit the neighbourhood
+                      hangouts that you've only ever seen on TV. Take in the
+                      iconic skyline and visit the neighbourhood.
+                    </p>
+                    <div class="comment-like">
+                      <div class="like-title">
+                        <a href="#" class="biz-btn biz-btn1">Reply</a>
+                      </div>
+                      <div class="like-btn pull-right">
+                        <a href="#" class="like"
+                          ><i class="fa fa-thumbs-up"></i> Like</a
+                        >
+                        <a href="#" class="disike"
+                          ><i class="fa fa-thumbs-down"></i> Dislike</a
+                        >
+                        <a href="#" class="love"
+                          ><i class="flaticon-like"></i> Love</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="single-add-review pad-top-30">
+                <h3>Write a Review</h3>
+                <form>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <input type="text" placeholder="Name" />
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <input type="email" placeholder="Email" />
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group">
+                        <textarea>Comment</textarea>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-btn">
+                        <a href="#" class="biz-btn biz-btn1">Submit Review</a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   {% include 'Vehicle_assignment/includes/footer.html' %}
+
+
+    <div id="back-to-top">
+      <a href="#"></a>
+    </div>
+
+    <div id="search1">
+      <button type="button" class="close">×</button>
+      <form>
+        <input type="search" value placeholder="type keyword(s) here" />
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+    <div class="modal fade" id="login" role="dialog">
+      <div class="modal-dialog">
+        <div class="login-content">
+          <div class="login-title section-border">
+            <h3>Login</h3>
+          </div>
+          <div class="login-form section-border">
+            <form>
+              <div class="form-group">
+                <input type="email" placeholder="Enter email address" />
+              </div>
+              <div class="form-group">
+                <input type="password" placeholder="Enter password" />
+              </div>
+            </form>
+            <div class="form-btn">
+              <a href="#" class="biz-btn biz-btn1">LOGIN</a>
+            </div>
+            <div class="form-group form-checkbox">
+              <input type="checkbox" /> Remember Me
+              <a href="#">Forgot password?</a>
+            </div>
+          </div>
+          <div class="login-social section-border">
+            <p>or continue with</p>
+            <a href="#" class="btn-facebook"
+              ><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a
+            >
+            <a href="#" class="btn-twitter"
+              ><i class="fab fa-twitter" aria-hidden="true"></i> Twitter</a
+            >
+          </div>
+          <div class="sign-up">
+            <p>Do not have an account?<a href="#">Sign Up</a></p>
+          </div>
+        </div>
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
+    </div>
+    <div class="modal fade" id="register" role="dialog">
+      <div class="modal-dialog">
+        <div class="login-content">
+          <div class="login-title section-border">
+            <h3>Register</h3>
+          </div>
+          <div class="login-form section-border">
+            <form>
+              <div class="form-group">
+                <input type="text" placeholder="User Name" />
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Full Name" />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Email" />
+              </div>
+              <div class="form-group">
+                <input type="password" placeholder="Password" />
+              </div>
+            </form>
+            <div class="form-btn">
+              <a href="#" class="biz-btn biz-btn1">REGISTER</a>
+            </div>
+            <div class="form-group form-checkbox">
+              <input type="checkbox" /> Remember Me
+              <a href="#">Forgot password?</a>
+            </div>
+          </div>
+          <div class="login-social section-border">
+            <p>or continue with</p>
+            <a href="#" class="btn-facebook"
+              ><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a
+            >
+            <a href="#" class="btn-twitter"
+              ><i class="fab fa-twitter" aria-hidden="true"></i> Twitter</a
+            >
+          </div>
+          <div class="sign-up">
+            <p>Do not have an account?<a href="#">Sign Up</a></p>
+          </div>
+        </div>
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
+    </div>
+
+    <script
+      data-cfasync="false"
+      src="{% static '../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"
+    ></script>
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/color-switcher.js' %}"></script>
+    <script src="{% static 'js/plugin.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/menu.js' %}"></script>
+    <script src="{% static 'js/custom-nav.js' %}"></script>
+    <script>
+      (function () {
+        var js =
+          "window['__CF$cv$params']={r:'7d726c61c9c041be',m:'a7BwG_zmsOWMM5NgqiLWAx4CVQ7VsCz5wYor5d1Tc0U-1686744136-0-AXRF/xrCBb8BnAR0lQ0wm5FMrE8K+b7f8mTKeRUDeQVv'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='../../../cdn-cgi/challenge-platform/h/g/scripts/jsd/6cdb09c9/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";
+        var _0xh = document.createElement("iframe");
+        _0xh.height = 1;
+        _0xh.width = 1;
+        _0xh.style.position = "absolute";
+        _0xh.style.top = 0;
+        _0xh.style.left = 0;
+        _0xh.style.border = "none";
+        _0xh.style.visibility = "hidden";
+        document.body.appendChild(_0xh);
+        function handler() {
+          var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;
+          if (_0xi) {
+            var _0xj = _0xi.createElement("script");
+            _0xj.nonce = "";
+            _0xj.innerHTML = js;
+            _0xi.getElementsByTagName("head")[0].appendChild(_0xj);
+          }
+        }
+        if (document.readyState !== "loading") {
+          handler();
+        } else if (window.addEventListener) {
+          document.addEventListener("DOMContentLoaded", handler);
+        } else {
+          var prev = document.onreadystatechange || function () {};
+          document.onreadystatechange = function (e) {
+            prev(e);
+            if (document.readyState !== "loading") {
+              document.onreadystatechange = prev;
+              handler();
+            }
+          };
+        }
+      })();
+    </script>
+  </body>
+
+  <!-- Mirrored from htmldesigntemplates.com/html/nepayatri/bootstrap4/blog-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Jun 2023 12:11:00 GMT -->
+</html>

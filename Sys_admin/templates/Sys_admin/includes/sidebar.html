@@ -1,0 +1,48 @@
+{% load static %}
+
+<div class="page-sidebar sidebar">
+    <div class="page-sidebar-inner slimscroll">
+        <div class="sidebar-header">
+            <div class="sidebar-profile">
+                <a href="javascript:void(0);" id="profile-menu-link">
+                    <div class="sidebar-profile-image">
+                        <img src="assets/images/profile-menu-image.png" class="img-circle img-responsive" alt="">
+                    </div>
+                    <div class="sidebar-profile-details">
+                        <span>{{user.username}}<br><small></small></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <ul class="menu accordion-menu">
+            <li class="active"><a href=" {% url 'admin_index' %} " class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-home"></span><p>Dashboard</p></a></li>
+            <li><a href="profile.html" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-user"></span><p>Profile</p></a></li>
+            <li><a href=" {% url 'inbox_view' %} " class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-envelope"></span><p>Mailbox</p></a>
+            </li>
+            <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-edit"></span><p>Add user</p><span class="arrow"></span></a>
+                <ul class="sub-menu">
+                    <li><a href=" {% url 'form_employee' %}">Add New Employee</a></li>
+                    <li><a href=" {% url 'form_officer' %} ">Add New Offcer</a></li>
+                    <li><a href=" {% url 'form_driver' %}">Add New Driver</a></li>
+                </ul>
+            </li>
+            <li ><a href=" {% url 'form_vehicle' %} " class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-edit"></span><p>Add vehicle</p></a></li>
+
+
+
+            <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-stats"></span><p>Edit</p><span class="arrow"></span></a>
+                <ul class="sub-menu">
+                    <li ><a href=" {% url 'form_Company_info' 1 %} "><span></span><p>Edit Company Info</p></a></li>
+                    <li ><a href=" {% url 'add_service'  %} " class="waves-effect waves-button"><span ></span><p>Add service</p></a></li>
+                    <li ><a href=" {% url 'edit_slider' 1 %} " class="waves-effect waves-button"><span ></span><p>Edit Slide1</p></a></li>
+                    <li ><a href=" {% url 'edit_slider' 2 %} " class="waves-effect waves-button"><span ></span><p>Edit Slide2</p></a></li>
+                    <li ><a href=" {% url 'edit_slider' 3 %} " class="waves-effect waves-button"><span ></span><p>Edit Slide3</p></a></li>
+                </ul>
+            </li>
+           
+        
+            <li ><a href=" {% url 'officer' %} " class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-edit"></span><p>Approve Trip</p></a></li>
+
+        </ul>
+    </div><!-- Page Sidebar Inner -->
+</div><!-- Page Sidebar -->

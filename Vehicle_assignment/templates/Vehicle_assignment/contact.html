@@ -1,0 +1,293 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
+  {% include 'Vehicle_assignment/includes/head.html' %}
+
+  <body>
+
+    {% include 'Vehicle_assignment/includes/header.html' %}
+
+    <section class="breadcrumb-outer text-center">
+      <div class="container">
+        <div class="breadcrumb-content">
+          <h2 class="white">Contact Us One</h2>
+          <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Contact Us One
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </section>
+
+    {% for i in data  %}
+
+    <section class="contact-main">
+      <div class="container">
+        <div class="contact-info mar-bottom-30">
+          <div class="row">
+            <div class="col-lg-4 col-md-12 col-12">
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fa fa-map-marker-alt"></i>
+                </div>
+                <div class="info-content">
+                  <p>{{i.adress}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fa fa-phone"></i>
+                </div>
+                <div class="info-content">
+                  <p>{{i.phone1}}</p>
+                  <p>{{i.phone2}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-12">
+              <div class="info-item">
+                <div class="info-icon">
+                  <i class="fa fa-envelope"></i>
+                </div>
+                <div class="info-content">
+                  <p>
+                    <a
+                      href="https://htmldesigntemplates.com/cdn-cgi/l/email-protection"
+                      class="__cf_email__"
+                      data-cfemail="1e777078715e507b6e7f677f6a6c77307d7173"
+                      >{{i.email1}}</a
+                    >
+                  </p>
+                  <p>
+                    <a
+                      href="https://htmldesigntemplates.com/cdn-cgi/l/email-protection"
+                      class="__cf_email__"
+                      data-cfemail="fe969b928ebeb09b8e9f879f8a8c97d09d9193"
+                      >{{i.email2}}</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-map">
+          <div class="row">
+          
+            <div class="col-lg-6">
+              <div id="contact-form1" class="contact-form">
+                <h3>Keep in Touch</h3>
+                <div id="contactform-error-msg"></div>
+                <form method="post" action="{% url 'contact' %}" name="contactform" id="contactform">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <label for="{{ form.first_name.id_for_label }}">First Name:</label>
+                    {{ form.first_name }}
+                  </div>
+                  <div class="form-group">
+                    <label for="{{ form.last_name.id_for_label }}">Last Name:</label>
+                    {{ form.last_name }}
+                  </div>
+                  <div class="form-group">
+                    <label for="{{ form.email.id_for_label }}">Email:</label>
+                    {{ form.email }}
+                  </div>
+                  <div class="form-group">
+                    <label for="{{ form.phone.id_for_label }}">Phone:</label>
+                    {{ form.phone }}
+                  </div>
+                  <div class="textarea">
+                    <label for="{{ form.message.id_for_label }}">Message:</label>
+                    {{ form.message }}
+                  </div>
+                  <div class="comment-btn text-right mar-top-15">
+                    <input type="submit" class="biz-btn" id="submit" value="Send Message" />
+                  </div>
+                </form>
+                
+                
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1970.1693461451707!2d38.76204919070005!3d9.032836131021083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85204e431b43%3A0x137bb80c845a5f84!2zQXJhdCBLaWxvIFBhdHJpb3RzIE1vbnVtZW50IHwg4Yqg4Yir4Ym1IOGKquGIjiDhiqDhiK3hiaDhip7hib0g4YiD4YuN4YiN4Ym1!5e0!3m2!1sen!2set!4v1689863598566!5m2!1sen!2set" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% endfor %}
+    
+    {% include 'Vehicle_assignment/includes/footer.html' %}
+
+    <div id="back-to-top">
+      <a href="#"></a>
+    </div>
+
+    <div id="search1">
+      <button type="button" class="close">×</button>
+      <form>
+        <input type="search" value placeholder="type keyword(s) here" />
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+    <div class="modal fade" id="login" role="dialog">
+      <div class="modal-dialog">
+        <div class="login-content">
+          <div class="login-title section-border">
+            <h3>Login</h3>
+          </div>
+          <div class="login-form section-border">
+            <form>
+              <div class="form-group">
+                <input type="email" placeholder="Enter email address" />
+              </div>
+              <div class="form-group">
+                <input type="password" placeholder="Enter password" />
+              </div>
+            </form>
+            <div class="form-btn">
+              <a href="#" class="biz-btn biz-btn1">LOGIN</a>
+            </div>
+            <div class="form-group form-checkbox">
+              <input type="checkbox" /> Remember Me
+              <a href="#">Forgot password?</a>
+            </div>
+          </div>
+          <div class="login-social section-border">
+            <p>or continue with</p>
+            <a href="#" class="btn-facebook"
+              ><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a
+            >
+            <a href="#" class="btn-twitter"
+              ><i class="fab fa-twitter" aria-hidden="true"></i> Twitter</a
+            >
+          </div>
+          <div class="sign-up">
+            <p>Do not have an account?<a href="#">Sign Up</a></p>
+          </div>
+        </div>
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
+    </div>
+    <div class="modal fade" id="register" role="dialog">
+      <div class="modal-dialog">
+        <div class="login-content">
+          <div class="login-title section-border">
+            <h3>Register</h3>
+          </div>
+          <div class="login-form section-border">
+            <form>
+              <div class="form-group">
+                <input type="text" placeholder="User Name" />
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Full Name" />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Email" />
+              </div>
+              <div class="form-group">
+                <input type="password" placeholder="Password" />
+              </div>
+            </form>
+            <div class="form-btn">
+              <a href="#" class="biz-btn biz-btn1">REGISTER</a>
+            </div>
+            <div class="form-group form-checkbox">
+              <input type="checkbox" /> Remember Me
+              <a href="#">Forgot password?</a>
+            </div>
+          </div>
+          <div class="login-social section-border">
+            <p>or continue with</p>
+            <a href="#" class="btn-facebook"
+              ><i class="fab fa-facebook" aria-hidden="true"></i> Facebook</a
+            >
+            <a href="#" class="btn-twitter"
+              ><i class="fab fa-twitter" aria-hidden="true"></i> Twitter</a
+            >
+          </div>
+          <div class="sign-up">
+            <p>Do not have an account?<a href="#">Sign Up</a></p>
+          </div>
+        </div>
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
+    </div>
+
+    <script
+      data-cfasync="false"
+      src="{% static ' ../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"
+    ></script>
+    <script src="{% static ' js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static ' js/bootstrap.min.js' %}"></script>
+    <script src="{% static ' js/color-switcher.js' %}"></script>
+    <script src="{% static ' js/plugin.js' %}"></script>
+    <script src="{% static ' js/main.js' %}"></script>
+    <script src="{% static ' js/menu.js' %}"></script>
+    <script src="{% static ' js/custom-nav.js' %}"></script>
+    <script src="{% static ' js/map.js' %}"></script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4JwWo5VPt9WyNp3Ne2uc2FMGEePHpqJ8&amp;callback=initMap"
+      async
+      defer
+    ></script>
+    <script>
+      (function () {
+        var js =
+          "window['__CF$cv$params']={r:'7d726c480fad0d95',m:'ZaY2PNe5cCri2NuwhAx9En6F0A15eUOL4_DuRKg4qJk-1686744131-0-ASsYcpdKGAC4KVWNou87F2OO3mSfX4BmYbhIP1t6LuPy'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='../../../cdn-cgi/challenge-platform/h/g/scripts/jsd/6cdb09c9/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";
+        var _0xh = document.createElement("iframe");
+        _0xh.height = 1;
+        _0xh.width = 1;
+        _0xh.style.position = "absolute";
+        _0xh.style.top = 0;
+        _0xh.style.left = 0;
+        _0xh.style.border = "none";
+        _0xh.style.visibility = "hidden";
+        document.body.appendChild(_0xh);
+        function handler() {
+          var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;
+          if (_0xi) {
+            var _0xj = _0xi.createElement("script");
+            _0xj.nonce = "";
+            _0xj.innerHTML = js;
+            _0xi.getElementsByTagName("head")[0].appendChild(_0xj);
+          }
+        }
+        if (document.readyState !== "loading") {
+          handler();
+        } else if (window.addEventListener) {
+          document.addEventListener("DOMContentLoaded", handler);
+        } else {
+          var prev = document.onreadystatechange || function () {};
+          document.onreadystatechange = function (e) {
+            prev(e);
+            if (document.readyState !== "loading") {
+              document.onreadystatechange = prev;
+              handler();
+            }
+          };
+        }
+      })();
+    </script>
+  </body>
+
+  <!-- Mirrored from htmldesigntemplates.com/html/nepayatri/bootstrap4/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Jun 2023 12:10:17 GMT -->
+</html>

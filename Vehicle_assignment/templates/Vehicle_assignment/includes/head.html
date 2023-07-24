@@ -1,0 +1,59 @@
+{% load static %}
+{% load fontawesome_5 %}
+{% fontawesome_5_static %} 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nepayatri - Tour & Travel Multipurpose Template</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href=" {% static 'images/favicon.png' %}" />
+    
+    <link href=" {% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+    
+    <link href=" {% static 'css/default.css' %}" rel="stylesheet" type="text/css" />
+    
+    <link href=" {% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+    
+    <link rel="stylesheet" href=" {% static 'css/color/color-default.css' %}" />
+    
+    <link href=" {% static 'css/plugin.css' %}" rel="stylesheet" type="text/css" />
+    
+    <link href=" {% static 'fonts/flaticon.css' %}" rel="stylesheet" type="text/css" />
+    
+    <script src="https://kit.fontawesome.com/99d0e22667.js" crossorigin="anonymous"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyDoUhIjs2qZ_qAjU0-I0OvO11QWlbgxExw"></script>
+ 
+    
+
+    <style>
+        #search_input {font-size:18px;}
+        .form-group{
+         margin-bottom: 10px;margin-top:50px;
+        }
+        .form-group label{
+         font-size:18px;
+         font-weight: 600;
+        }
+        .form-group input{
+            width: 100%;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+        .form-group input:focus {
+            color: #495057;
+            background-color: #fff;
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+        }
+        </style>
+    
+</head>

@@ -1,0 +1,449 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
+
+
+{% include 'Vehicle_assignment/includes/head.html' %}
+
+<body>
+
+{% include 'Vehicle_assignment/includes/header.html' %}
+
+
+<section class="breadcrumb-outer text-center">
+<div class="container">
+<div class="breadcrumb-content">
+<h2 class="white">About Us 1</h2>
+<nav aria-label="breadcrumb">
+<ul class="breadcrumb">
+<li class="breadcrumb-item"><a href="#">Home</a></li>
+<li class="breadcrumb-item active" aria-current="page">About Us 1</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="overlay"></div>
+</section>
+
+<section class="about-us">
+<div class="container">
+<div class="section-title">
+<h2>We're truely dedicated to make your travel experiences as much simple and fun as possible</h2>
+</div>
+<div class="about-desc">
+<div class="row">
+    {% for i in about %}
+<div class="col-lg-6 col-md-6 col-12 mt-5">
+<div class="about-story">
+<h3>{{i.title}}</h3>
+<p class="mar-0">
+{{i.description}}
+</p>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+</div>
+</section>
+
+
+
+<section class="call-to-action action1 pad-bottom-0">
+<div class="container">
+<div class="section-title">
+<div class="action-content">
+<h3 class="white package-name">SUMMER SPCIAL</h3>
+<h2 class="discounted"><span>25%</span> off</h2>
+<h2 class="white">SPEND THE BEST VACTION WITH US The nights of Thailand</h2>
+<p class="mar-bottom-20">4days / 5nights</p>
+<a href="#" class="biz-btn">View Details</a>
+</div>
+</div>
+<div class="row display-flex">
+<div class="col-lg-3"></div>
+<div class="col-lg-6 col-12">
+<div class="video-click">
+<div class="video-image">
+<img src="images/hometype1.jpg" alt="vide" />
+</div>
+<div class="call-button">
+<button type="button" class="play-btn js-video-button" data-video-id="152879427" data-channel="vimeo">
+<i class="fa fa-play"></i>
+</button>
+</div>
+<div class="video-figure"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="customer-reviews">
+<div class="container">
+<div class="section-title">
+<h2>More Than 960+ People <span>Are Happy With Us.</span></h2>
+<p>
+Lorem Ipsum is simply dummy text the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+1500s,
+</p>
+</div>
+<div class="row about-slider">
+<div class="col-lg-4 review-item">
+<div class="review-image">
+<img src="images/testimonial1.jpg" alt="image" />
+<div class="review-quote">
+<i class="fa fa-quote-left" aria-hidden="true"></i>
+</div>
+</div>
+<div class="review-content mar-top-25">
+<p class="content">
+This is the third time I've used Travelo Website and telling you the truth their services are always reliable and it ony takes few minutes to
+plan and finalize.
+</p>
+<h3 class="mar-bottom-5">Jessica Brown</h3>
+<p class="mar-bottom-5">Director/Franchisis Com</p>
+<ul class="list-inline mar-0">
+<li><i class="fa fa-star"></i></li>
+<li><i class="fa fa-star"></i></li>
+<li><i class="fa fa-star"></i></li>
+<li><i class="fa fa-star"></i></li>
+<li><i class="fa fa-star"></i></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-4 review-item">
+<div class="review-image">
+<img src="images/inbox8.jpg" alt="image" />
+<div class="review-quote">
+<i class="fa fa-quote-left" aria-hidden="true"></i>
+</div>
+</div>
+<div class="review-content mar-top-25">
+<p class="content">
+This is the third time I've used Travelo Website and telling you the truth their services are always reliable and it ony takes few minutes to
+plan and finalize.
+</p>
+<h3 class="mar-bottom-5">Jessica Brown</h3>
+<p class="mar-bottom-5">CEO/Mario Brand</p>
+<ul class="list-inline mar-0">
+<li><i class="fa fa-star"></i></li>
+<li><i class="fa fa-star"></i></li>
+<li><i class="fa fa-star"></i></li>
+<li><i class="fa fa-star"></i></li>
+<li><i class="fa fa-star"></i></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-4 review-item">
+<div class="review-image">
+<img src="images/inbox4.jpg" alt="image" />
+<div class="review-quote">
+<i class="fa fa-quote-left" aria-hidden="true"></i>
+</div>
+</div>
+<div class="review-content mar-top-25">
+<p class="content">
+This is the third time I've used Travelo Website and telling you the truth their services are always reliable and it ony takes few minutes to
+plan and finalize.
+</p>
+<h3 class="mar-bottom-5">Jessica Brown</h3>
+<p class="mar-bottom-5">COO/Nell & wells Co.</p>
+<ul class="list-inline mar-0">
+<li><i class="fa fa-star"></i></li>
+<li><i class="fa fa-star"></i></li>
+<li><i class="fa fa-star"></i></li>
+<li><i class="fa fa-star"></i></li>
+<li><i class="fa fa-star"></i></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="travelcounter counter1">
+<div class="container">
+<div class="section-title">
+<h2 class="white">call our <span>agents</span> to book</h2>
+<p class="white">Travel award winning and top rated tour operator</p>
+</div>
+<div class="row service-gg">
+<div class="col-lg-3 col-sm-6">
+<div class="counter-item">
+<div class="counter-icon">
+<i class="fas fa-hiking" aria-hidden="true"></i>
+</div>
+<div class="counter-content">
+<h3 class="boats">80</h3>
+<p class="mar-0">Pro Tour Guides</p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-sm-6">
+<div class="counter-item">
+<div class="counter-icon">
+<i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+</div>
+<div class="counter-content">
+<h3 class="location">19</h3>
+<p class="mar-0">Tours are Completed</p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-sm-6">
+<div class="counter-item">
+<div class="counter-icon">
+<i class="fa fa-walking" aria-hidden="true"></i>
+</div>
+<div class="counter-content">
+<h3 class="showroom">10</h3>
+<p class="mar-0">Traveling Experience</p>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-sm-6">
+<div class="counter-item">
+<div class="counter-icon">
+<i class="fa fa-users" aria-hidden="true"></i>
+</div>
+<div class="counter-content">
+<h3 class="lisence">100</h3>
+<p class="mar-0">Happy Customers</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="tour-agent">
+<div class="container">
+<div class="section-title">
+<h2>Travel <span>Agents</span></h2>
+<p>
+Lorem Ipsum is simply dummy text the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+1500s,
+</p>
+</div>
+<div class="agent-main">
+<div class="row">
+<div class="col-lg-3 col-sm-6">
+<div class="agent-list">
+<div class="agent-image">
+<img src="images/inbox5.jpg" alt="agent" />
+<div class="agent-content">
+<h3 class="white mar-bottom-5">Salmon Thuir</h3>
+<p class="white mar-0">Tourist Advisor</p>
+</div>
+</div>
+<div class="agent-social">
+<ul class="social-links">
+<li>
+<a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+</li>
+<li>
+<a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+</li>
+<li>
+<a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+</li>
+<li>
+<a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-sm-6">
+<div class="agent-list">
+<div class="agent-image">
+<img src="images/inbox6.jpg" alt="agent" />
+<div class="agent-content">
+<h3 class="white mar-bottom-5">Salmon Thuir</h3>
+<p class="white mar-0">Tourist Advisor</p>
+</div>
+</div>
+<div class="agent-social">
+<ul class="social-links">
+<li>
+<a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+</li>
+<li>
+<a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+</li>
+<li>
+<a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+</li>
+<li>
+<a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-sm-6">
+<div class="agent-list">
+<div class="agent-image">
+<img src="images/inbox7.jpg" alt="agent" />
+<div class="agent-content">
+<h3 class="white mar-bottom-5">Salmon Thuir</h3>
+<p class="white mar-0">Tourist Advisor</p>
+</div>
+</div>
+<div class="agent-social">
+<ul class="social-links">
+<li>
+<a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+</li>
+<li>
+<a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+</li>
+<li>
+<a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+</li>
+<li>
+<a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-sm-6">
+<div class="agent-list">
+<div class="agent-image">
+<img src="images/inbox8.jpg" alt="agent" />
+<div class="agent-content">
+<h3 class="white mar-bottom-5">Salmon Thuir</h3>
+<p class="white mar-0">Tourist Advisor</p>
+</div>
+</div>
+<div class="agent-social">
+<ul class="social-links">
+<li>
+<a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+</li>
+<li>
+<a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+</li>
+<li>
+<a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+</li>
+<li>
+<a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+{% include 'Vehicle_assignment/includes/footer.html' %}
+
+<div id="back-to-top">
+<a href="#"></a>
+</div>
+
+
+<div id="search1">
+<button type="button" class="close">×</button>
+<form>
+<input type="search" value placeholder="type keyword(s) here" />
+<button type="submit" class="btn btn-primary">Search</button>
+</form>
+</div>
+<div class="modal fade" id="login" role="dialog">
+<div class="modal-dialog">
+<div class="login-content">
+<div class="login-title section-border">
+<h3>Login</h3>
+</div>
+<div class="login-form section-border">
+<form>
+<div class="form-group">
+<input type="email" placeholder="Enter email address" />
+</div>
+<div class="form-group">
+<input type="password" placeholder="Enter password" />
+</div>
+</form>
+<div class="form-btn">
+<a href="#" class="biz-btn biz-btn1">LOGIN</a>
+</div>
+<div class="form-group form-checkbox">
+<input type="checkbox" /> Remember Me
+<a href="#">Forgot password?</a>
+</div>
+</div>
+<div class="login-social section-border">
+<p>or continue with</p>
+<a href="#" class="btn-facebook"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
+<a href="#" class="btn-twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
+</div>
+<div class="sign-up">
+<p>Do not have an account?<a href="#">Sign Up</a></p>
+</div>
+</div>
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+</div>
+<div class="modal fade" id="register" role="dialog">
+<div class="modal-dialog">
+<div class="login-content">
+<div class="login-title section-border">
+<h3>Register</h3>
+</div>
+<div class="login-form section-border">
+<form>
+<div class="form-group">
+<input type="text" placeholder="User Name" />
+</div>
+<div class="form-group">
+<input type="text" placeholder="Full Name" />
+</div>
+<div class="form-group">
+<input type="email" placeholder="Email" />
+</div>
+<div class="form-group">
+<input type="password" placeholder="Password" />
+</div>
+</form>
+<div class="form-btn">
+<a href="#" class="biz-btn biz-btn1">REGISTER</a>
+</div>
+<div class="form-group form-checkbox">
+<input type="checkbox" /> Remember Me
+<a href="#">Forgot password?</a>
+</div>
+</div>
+<div class="login-social section-border">
+<p>or continue with</p>
+<a href="#" class="btn-facebook"><i class="fa fa-facebook" aria-hidden="true"></i> Facebook</a>
+<a href="#" class="btn-twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
+</div>
+<div class="sign-up">
+<p>Do not have an account?<a href="#">Sign Up</a></p>
+</div>
+</div>
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+</div>
+
+<script data-cfasync="false" src="{% static '../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script><script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/color-switcher.js' %}"></script>
+<script src="{% static 'js/plugin.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/menu.js' %}"></script>
+<script src="{% static 'js/custom-nav.js' %}"></script>
+<script>(function(){var js = "window['__CF$cv$params']={r:'7d726c3b4c0241be',m:'MsqcgdkB2AgFZOppCtTS9EtP5c_twsl0ny_hQGiqk3w-1686744129-0-AZksVZ9t44CKOkRnxIFED8XqJMLO7aPo7qtkjR0I5nyh'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='../../../cdn-cgi/challenge-platform/h/g/scripts/jsd/6cdb09c9/invisible.js' %}',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+
+<!-- Mirrored from htmldesigntemplates.com/html/nepayatri/bootstrap4/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 14 Jun 2023 12:06:59 GMT -->
+</html>
