@@ -7,9 +7,9 @@
     <div class="col-8">
       
        {% if messages %}
-       <ul class="messages justify-content-center">
+       <ul class="messages">
            {% for message in messages %}
-           <div class="alert bg-success col-lg-3 {% if message.tags == 'success' %} alert-success {% else %} alert-danger {% endif %}  alert-dismissible">
+           <div class="alert text-white bg-success col-lg-7 p-4 {% if message.tags == 'success' %} alert-success {% else %} alert-danger {% endif %}  alert-dismissible">
              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
               {{message}}
            </div>

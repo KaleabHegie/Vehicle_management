@@ -31,11 +31,8 @@ import smtplib
 @login_required
 @admin_user_required
 def admin_index(request):
-    x = [1, 2, 3, 4, 5]
-    y = [1, 4, 9, 16, 25]
-    data = [go.Scatter(x=x, y=y)]
-    layout = go.Layout(title='My Graph')
-    graph = go.Figure(data=data, layout=layout)
+    graph = [Employee.objects.count(),Officer.objects.count(),Vehicle.objects.count(),Driver.objects.count()]
+   
     context ={
         'employee': Employee.objects.all(),
         'officer': Officer.objects.all(),
@@ -44,7 +41,7 @@ def admin_index(request):
         'officer_count': Officer.objects.count(),
         'vehicle_count': Vehicle.objects.count(),
         'driver_count':  Driver.objects.count(),
-        'plot_div' : graph.to_html(full_html=False)
+        'graph':graph
     }
     return render(request, 'Sys_admin/index.html' , context )
 

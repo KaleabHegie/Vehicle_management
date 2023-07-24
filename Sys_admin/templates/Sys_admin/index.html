@@ -219,10 +219,24 @@
                                                 <h4 class="panel-title">Visitors</h4>
                                             </div>
                                             <div class="panel-body">
-                                                {% comment %} <div id="flotchart1"></div> {% endcomment %}
-                                                <div>
-                                                    {{ plot_div|safe }}
-                                                </div>
+                                                <script src="https://code.highcharts.com/highcharts.js"></script>
+                                                <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                                                <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                                                <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+                                                
+                                                <figure class="highcharts-figure">
+                                                    <div id="container"></div>
+                                                    <p class="highcharts-description">
+                                                        A basic column chart comparing estimated corn and wheat production
+                                                        in some countries.
+                                                
+                                                        The chart is making use of the axis crosshair feature, to highlight
+                                                        the hovered country.
+                                                    </p>
+                                                </figure>
+                                                
+                                                
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -347,6 +361,52 @@
       {% include 'Sys_admin/includes/scripts.html' %}
         
     </body>
+    <script>
+        Highcharts.chart('container', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Corn vs wheat estimated production for 2020',
+                align: 'left'
+            },
+            subtitle: {
+                text:
+                    'Source: <a target="_blank" ' +
+                    'href="https://www.indexmundi.com/agriculture/?commodity=corn">indexmundi</a>',
+                align: 'left'
+            },
+            xAxis: {
+                categories: ['Employee','Officer','Vehicle','Driver'],
+                crosshair: true,
+                accessibility: {
+                    description: 'Countries'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '1000 metric tons (MT)'
+                }
+            },
+            tooltip: {
+                valueSuffix: ' (1000 MT)'
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [
+                {
+                    name: 'Corn',
+                    data: {{graph|safe}}
+                }
+            ]
+        });
+        
+    </script>
 
 <!-- Mirrored from polygons.space/modern/Source/admin1/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jul 2023 08:01:09 GMT -->
 </html>
