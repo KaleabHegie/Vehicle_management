@@ -52,3 +52,5 @@ class EmployeeReviewForm(forms.ModelForm):
         widgets = {
             'comment': forms.Textarea(attrs={'class': 'form-control'}),
         }
+
+

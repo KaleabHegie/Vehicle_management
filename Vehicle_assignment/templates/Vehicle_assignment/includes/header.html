@@ -95,9 +95,7 @@
               <li>
                   <a href="{% url 'faq' %}">FAQ</a>
               </li>
-              <li>
-                <a href="{% url 'blog' %}">Blogs</a>
-              </li>
+             
 
               
               {% if user.is_authenticated %}
@@ -117,6 +115,7 @@
             {% comment %} <li>
               <a href="{% url 'employee_review'  %}">Reviews</a>
             </li> {% endcomment %}
+          
            
             <li>
               <a href="{% url 'change_password' %}">Change Password</a>

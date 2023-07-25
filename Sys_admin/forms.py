@@ -27,7 +27,7 @@ class EmployeeForm(forms.ModelForm):
         fields = ('dob', 'phone', 'image')
 
 class DriverForm(forms.ModelForm):
-    vehicle = forms.ModelChoiceField(queryset=Vehicle.objects.all(), widget=forms.Select(attrs={'class': 'form-control'}))
+    vehicle = forms.ModelChoiceField(queryset=Vehicle.objects.filter(driver__isnull=True), widget=forms.Select(attrs={'class': 'form-control'}))
     dob = forms.DateField(widget=forms.DateInput(attrs={'class': 'form-control','type' : 'date'}))
     phone = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}))
     image = forms.ImageField(widget=forms.FileInput(attrs={'class': 'form-control'}))

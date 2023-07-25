@@ -168,3 +168,5 @@ class Messages(models.Model):
 class EmployeeReview(models.Model):
     employee = models.ForeignKey(Employee , on_delete=models.CASCADE)
     comment = models.TextField()      
+
+

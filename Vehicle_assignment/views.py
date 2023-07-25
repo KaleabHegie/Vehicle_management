@@ -121,17 +121,37 @@ def index(request):
 #     vehicle.objects.save()
     
 
-
+    try: employee = Employee.objects.get(customuser = request.user)
+    except: employee = None
+    try: registry = Registry.objects.get(employee = request.user)
+    except: registry = None
+    registry = Registry.objects.filter(employee=employee).last()
     context = {
-        
         'data':CompanyInfo.objects.all(),
         'slider':Slider.objects.all(),
         'cars':Vehicle.objects.all(),
+        'employee':employee,
+        'registry':registry
         
     }
     return render(request, 'Vehicle_assignment/index-cars.html', context) 
 
-
+@login_required
+@employee_user_required
+def end_trip(request):
+    try: employee = Employee.objects.get(customuser = request.user)
+    except: employee = None
+    try: registry = Registry.objects.get(employee = request.user)
+    except: registry = None
+    registry = Registry.objects.filter(employee=employee).last()
+    try:
+         registry.driver.avaialabilty=True 
+         registry.driver.save()
+    except: None 
+    registry.status = False
+    registry.save()
+    
+    return render(request , 'Vehicle_assignment/end_trip.html')
 @login_required
 @employee_user_required
 def add_registry(request):
@@ -140,8 +160,9 @@ def add_registry(request):
     try: registry = Registry.objects.get(employee = request.user)
     except: registry = None
 
-
-    if request.method == 'POST' and (registry is None or registry.status is False):
+    registry = Registry.objects.filter(employee=employee).last() 
+    if request.method == 'POST':
+      if (registry is None or registry.status is False):
         form = RegistryForm(request.POST)
         if form.is_valid():
             registry = form.save(commit=False)
@@ -150,10 +171,12 @@ def add_registry(request):
             registry.save()
             messages.success(request, 'Form submitted successfully!')
             return redirect('index')
+      else:
+        return redirect('index')
     else:
         form = RegistryForm()
-        messages.success(request, 'You either are already using a vhicle or requested for one.')
-        return redirect('index')
+        messages.error(request, 'You either are already using a vhicle or requested for one.')
+        
     
     context = {
         'form': form,
@@ -177,7 +200,11 @@ def car_detail(request):
     return render(request, 'Vehicle_assignment/car-detail.html')
 
 def about(request):
-    context = {
+    context ={
+        'employee_count': Employee.objects.count(),
+        'officer_count': Officer.objects.count(),
+        'vehicle_count': Vehicle.objects.count(),
+        'driver_count':  Driver.objects.count(),
         'data':CompanyInfo.objects.all(),
         'about':Abouts.objects.all()
             }

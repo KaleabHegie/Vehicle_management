@@ -4,6 +4,7 @@
 
 {% include 'Vehicle_assignment/message.html' %}
 
+
   {% include 'Vehicle_assignment/includes/head.html' %}
   <body>
     
@@ -66,10 +67,21 @@
 
 
       </div>
-      
+
+
+      <div class="container">
       <div class="row justify-content-center mt-5">
-        <a class="biz-btn btn-lg" href="{% url 'add_registry' %}"> Book Now </a>
+        <div class="col-lg-3">
+          <a class="biz-btn btn-lg" href="{% url 'add_registry' %}"> Book Now </a>
         </div>
+        {% if user.is_authenticated and registry is None or registry.status is True %}
+          <div class="col-lg-3">
+            <a class="biz-btn btn-lg" href="{% url 'end_trip' %}"> End Trip </a>
+          </div>
+        {% endif %}
+        </div>
+      </div>
+
     </section>
 
 
@@ -138,51 +150,7 @@
 
 
 
-    <section class="customer-reviews bg-grey">
-      <div class="container">
-        <div class="section-title">
-          <h2>More Than 960+ People <span>Are Happy With Us.</span></h2>
-          <p>
-            Lorem Ipsum is simply dummy text the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s,
-          </p>
-        </div>
-        <div class="row about-slider">
-
-
-          {% for i in review  %}
-          <div class="col-lg-4 review-item">
-            <div class="review-image">
-              <img src="{% static 'images/testimonial1.jpg' %}" alt="image" />
-              <div class="review-quote">
-                <i class="fa fa-quote-left" aria-hidden="true"></i>
-              </div>
-            </div>
-            <div class="review-content mar-top-25">
-              <p class="content">
-                This is the third time I've used Travelo Website and telling you
-                the truth their services are always reliable and it ony takes
-                few minutes to plan and finalize.
-              </p>
-              <h3 class="mar-bottom-5">Jessica Brown</h3>
-              <p class="mar-bottom-5">Director/Franchisis Com</p>
-              <ul class="list-inline mar-0">
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-              </ul>
-            </div>
-          </div>
-         
-          {% endfor %}
-
-        </div>
-      </div>
-    </section>
-
+    
     <section class="partners bg-grey">
       <div class="container">
         <div class="dest-partner">

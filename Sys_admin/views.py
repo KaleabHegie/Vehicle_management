@@ -41,6 +41,8 @@ def admin_index(request):
         'officer_count': Officer.objects.count(),
         'vehicle_count': Vehicle.objects.count(),
         'driver_count':  Driver.objects.count(),
+        'message': Messages.objects.all(),
+        'message_count': Messages.objects.count(),
         'graph':graph
     }
     return render(request, 'Sys_admin/index.html' , context )
@@ -149,6 +151,7 @@ def edit_company_info(request, pk):
 
 
 
+
 @login_required
 @officer_user_required
 def edit_registry(request, pk):
@@ -165,24 +168,28 @@ def edit_registry(request, pk):
             form.save()
             driver_email = registry.driver.customuser.email
             employee_email = registry.employee.customuser.email
-            send_mail(
-                'Your vehicle is ready',
-                f'Your trip has been approved. Your drivers name is {registry.driver} with car {registry.driver.vehicle.color} {registry.driver.vehicle.model} with {registry.driver.vehicle} plate number',
-                EMAIL_HOST_USER,
-                [employee_email],
-                fail_silently=False,
-            )
-            send_mail(
-                'You have been assigned',
-                f'You have been assigned to take {registry.employee.customuser.first_name} from {registry.pick_up} to {registry.drop_off} with return time {registry.return_time}',
-                EMAIL_HOST_USER,
-                [driver_email],
-                fail_silently=False,
-            )
+            if employee_email:
+                send_mail(
+                    'Your vehicle is ready',
+                    f'Your trip has been approved. Your drivers name is {registry.driver} with car {registry.driver.vehicle.color} {registry.driver.vehicle.model} with {registry.driver.vehicle} plate number',
+                    EMAIL_HOST_USER,
+                    [employee_email],
+                    fail_silently=False,
+                )
+            if driver_email:
+                send_mail(
+                    'You have been assigned',
+                    f'You have been assigned to take {registry.employee.customuser.first_name} from {registry.pick_up} to {registry.drop_off} with return time {registry.return_time}',
+                    EMAIL_HOST_USER,
+                    [driver_email],
+                    fail_silently=False,
+                )
             return redirect('officer')
     else:
         form = RegistryForm(instance=registry)
     return render(request, 'Sys_admin/approve_registry.html', {'form': form})
+
+   
 
 
 

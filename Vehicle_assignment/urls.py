@@ -37,6 +37,8 @@ urlpatterns = [
                         
                           path('employees/<int:employee_id>/review/', views.employee_review, name='employee_review'),
 
+                            path('end_trip/', views.end_trip, name='end_trip'),
+
               
 ]
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
